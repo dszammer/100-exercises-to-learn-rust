@@ -15,8 +15,7 @@ impl Ticket {
             panic!("Title cannot be empty");
         }
         if title.len() > 50 {
-            panic!("Title cannot be longer than 50 bytes");
-        }
+            panic!("Title cannot be longer than 50 bytes");        }
         if description.is_empty() {
             panic!("Description cannot be empty");
         }
@@ -34,17 +33,17 @@ impl Ticket {
         }
     }
 
-    pub fn title(self) -> String {
-        self.title
-    }
+    pub fn title(&self) -> &str {
+            &self.title
+        }
 
-    pub fn description(self) -> String {
-        self.description
-    }
+        pub fn description(&self) -> &str {
+            &self.description
+        }
 
-    pub fn status(self) -> String {
-        self.status
-    }
+        pub fn status(&self) -> &str {
+            &self.status
+        }
 }
 
 #[cfg(test)]
